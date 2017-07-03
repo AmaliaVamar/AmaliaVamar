@@ -2,79 +2,81 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css?family=Palanquin+Dark" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet"/>
-    <title>Mi página</title>
+    <title></title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Overpass+Mono:400,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-
   <body>
-    <div id= "inicio">
-        <ul class="navlist">
-          <li> <a href="#inicio"> INICIO </a> </li>
-          <li> <a href="#trabajos">TRABAJOS</a> </li>
-          <li> <a href="#contacto">CONTACTO</a> </li>
-        </ul>
-
-        <div id="divmano">
-            <img src="img/manos.svg" alt="manosicon" id="manos"/>
-        </div>
-
-        <div class="textoprincipal">
-            <h1 id="hola"> HOLA! </h1>
-        </div>
-
-        <div>
-            <p id="p22"> SOY AMALIA, ESTUDIANTE DE <a id="adalab" href="http://adalab.es/" target="_blank"> ADALAB. </a> </p>
-        </div>
-
-        <br>
-
+    <div class="menu">
+      <div class="header-content">
+          <ul class="nav cl-effect-14">
+            <li class="nav-item "><a class="nav-link" href="#home">home</a></li>
+            <li class="nav-item "><a class="nav-link" href="#proyects">proyectos</a></li>
+            <li class="nav-item "><a class="nav-link" href="#contact">contacto</a></li>
+          </ul>
       </div>
-
-      <div id="trabajos">
-
-        <div>
-          <h2 class="h33">TRABAJOS</h2>
-        </div>
-
-
-        <table id="tabla">
-            <thead>
-              <tr>
-                <th>2016</th>
-                <th>2017</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><img src="https://images.pexels.com/photos/82383/night-light-black-metal-82383.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="rejilla" id="rejilla"/></td>
-                <td><img src="https://images.pexels.com/photos/82383/night-light-black-metal-82383.jpeg?w=940&h=650&auto=compress&cs=tinysrgb" alt="rejilla" id="rejilla"/></td>
-              </tr>
-            </tbody>
-        </table>
-
-
     </div>
 
-    <div id="contacto">
-        <div>
-            <h2 class="h33">CONTACTO</h2>
+    <div class="home" id="home">
+        <img class="home-image" src="images/manos.svg" alt="">
+        <h1 class="home-text">Hola! Soy Amalia, desarrolladora Front-end.</h1>
+    </div>
+
+    <div class="proyects panel" id="proyects">
+
+        <div class="proyects-btn-container">
+          <a id="smileLink" href="#">La Sonrisa Felina</a>
+          <a id="newLink" href="#">Los nuevos habitantes de la españa vacía</a>
         </div>
 
-        <div id="dienlace">
-            <a id="enlace" href="http://www.twitter.es" target="_blank">    <img id="twit" src="img/twitter.svg" alt="linkedin" /> </a>
-        </div>
+        <div class="proyects-show-container">
 
-        <div id="divlist">
-            <ul id="listat">
-              <li>Twitter</li>
-              <li>LinkedIn</li>
-            </ul>
+          <div class="proyect-smile" id="proyectSmile">
+            <div>
+              <p class="proyects-text">Rediseño de la página web de La Sonrisa Felina.</p>
+              <p>Proyecto desarrollado en colaboración con Codesai. </p>
+            </div>
+            <div class="proyect-smile-content">
+              <a href="https://adalab.github.io/laSonrisaFelina/"><img class="image" src="images/lasonrisafelina.jpg" alt=""></a>
+            </div>
+          </div>
+
+          <div class="proyect-new" id="proyectNew">
+            <div class="proyects-text-container">
+              <p class="proyects-text">Página creada para la difusión del proyecto del grupo de periodismo de datos de Medialab-Prado.</p>
+            </div>
+            <div class="proyect-new-content">
+              <a href="https://medialab-prado.github.io/nuevos-habitantes/index.html"><img class="image" src="images/losnuevoshabitantes.jpg" alt=""></a>
+            </div>
+          </div>
+
+          <div class="hands-background">
+            <img class="hands-proyects" src="images/mano1.svg" alt="">
+            <img class="hands-proyects" src="images/mano2.svg" alt="">
+          </div>
+
         </div>
     </div>
 
+    <div class="panel contact" id="contact">
+      <a href="https://github.com/AmaliaVamar" class="contact-a" ><img class="contact-image" src="images/github.png" alt=""></a>
+      <a href="https://www.linkedin.com/in/amaliavaquero/" class="contact-a" ><img class="contact-image" src="images/linkedin-logo.png" alt=""></a>
+      <div class="hands-background">
+        <img  class="hands-contact" src="images/manos.svg" alt="">
+      </div>
+    </div>
 
+    <div class="mobile-view">
+      <img class="mobile-image" src="images/manos.svg" alt="">
+      <p class="mobile-text" >Hola! Soy Amalia, desarrolladora Front-end.</p>
+      <div class="mobile-links-content">
+        <a href="https://github.com/AmaliaVamar"><img class="mobile-images-links" src="images/github.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/amaliavaquero/"><img class="mobile-images-links" src="images/linkedin-logo.png" alt=""></a>
+      </div>
+    <div>
 
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>

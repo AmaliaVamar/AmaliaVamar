@@ -1,0 +1,248 @@
+.header-content{
+  display: none;
+}
+
+.home{
+  display: none;
+}
+
+.proyects{
+  display: none;
+}
+
+.contact{
+  display: none;
+}
+
+.mobile-view{
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.mobile-text{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.mobile-links-content{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media (min-width: $deskopt-size) {
+
+  .mobile-view{
+    display: none;
+  }
+
+  .header-content {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .cl-effect-14 a {
+  	position: relative;
+  	display: inline-block;
+  	margin: 5px 15px;
+    padding: 0 20px;
+    height: 45px;
+    line-height: 45px;
+  	outline: none;
+  	color: rgb(0,169,157);
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	letter-spacing: 1px;
+  	font-weight: 400;
+  	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  	font-size: 1em;
+  }
+
+  .cl-effect-14 a:hover,
+  .cl-effect-14 a:focus {
+  	outline: none;
+  }
+  .cl-effect-14 a::before,
+  .cl-effect-14 a::after {
+  	position: absolute;
+  	width: 25px;
+  	height: 2px;
+  	background: $color-secundary;
+  	content: '';
+  	opacity: 0.2;
+  	-webkit-transition: all 0.3s;
+  	-moz-transition: all 0.3s;
+  	transition: all 0.3s;
+  	pointer-events: none;
+  }
+
+  .cl-effect-14 a::before {
+  	top: 0;
+  	left: 0;
+  	-webkit-transform: rotate(90deg);
+  	-moz-transform: rotate(90deg);
+  	transform: rotate(90deg);
+  	-webkit-transform-origin: 0 0;
+  	-moz-transform-origin: 0 0;
+  	transform-origin: 0 0;
+  }
+
+  .cl-effect-14 a::after {
+  	right: 0;
+  	bottom: 0;
+  	-webkit-transform: rotate(90deg);
+  	-moz-transform: rotate(90deg);
+  	transform: rotate(90deg);
+  	-webkit-transform-origin: 100% 0;
+  	-moz-transform-origin: 100% 0;
+  	transform-origin: 100% 0;
+  }
+
+  .cl-effect-14 a:hover::before,
+  .cl-effect-14 a:hover::after,
+  .cl-effect-14 a:focus::before,
+  .cl-effect-14 a:focus::after {
+  	opacity: 1;
+  }
+
+  .cl-effect-14 a:hover::before,
+  .cl-effect-14 a:focus::before {
+  	left: 50%;
+  	-webkit-transform: rotate(0deg) translateX(-50%);
+  	-moz-transform: rotate(0deg) translateX(-50%);
+  	transform: rotate(0deg) translateX(-50%);
+  }
+
+  .cl-effect-14 a:hover::after,
+  .cl-effect-14 a:focus::after {
+  	right: 50%;
+  	-webkit-transform: rotate(0deg) translateX(50%);
+  	-moz-transform: rotate(0deg) translateX(50%);
+  	transform: rotate(0deg) translateX(50%);
+  }
+
+  .cl-effect-14 a:active {
+    color: rgb(124, 181, 177);
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: $color-primary;
+  }
+
+  .proyects {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    background-color: $color-primary;
+  }
+
+  .proyects-btn-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 4;
+  }
+
+  .proyects-show-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s ease-out;
+  }
+
+  .proyects-text-container {
+    padding: 20px;
+    z-index: 4;
+  }
+
+  .proyect-smile {
+    display: none;
+    width: 100%;
+    z-index: 2;
+    animation: enter 2s;
+  }
+
+  .proyects-hand-container {
+    width: 100%;
+    z-index: -10;
+    position: fixed;
+    opacity: 0.06;
+    display: none;
+    top: -5px;
+    right: 40px;
+    animation: enter 2s;
+  }
+
+  .proyects-hands {
+    width: 40%;
+    z-index: 0;
+    transform: rotate(90deg);
+  }
+
+  .proyect-smile-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proyect-new {
+    display: none;
+    width: 100%;
+    z-index: 2;
+    animation: enter 2s;
+  }
+
+  .proyect-new-content {
+    display:flex;
+    flex-direction: column;
+    z-index: 4;
+  }
+
+  .show-proyect {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(8, 4, 44, 0.85);
+  }
+
+  .contact {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-primary;
+  }
+
+  .panel {
+  	width: 100%;
+  	min-height: 100%;
+  	position: absolute;
+  	box-shadow: 4px -4px 4px rgba(0,0,0,0.2);
+  	margin-left: -180%;
+  	z-index:2;
+  	transition: all 1s ease-in-out;
+  }
+
+  .panel:target {
+  	margin-left: 0%;
+  }
+}

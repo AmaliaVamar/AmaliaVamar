@@ -1,0 +1,37 @@
+
+  @keyframes enter {
+    0% {
+      transform: translate3d(100%, 0, 0);
+    }
+  }
+
+  @keyframes fadeFromTop {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -150%, 0);
+    }
+  }
+
+  @keyframes handsContact {
+    0% {
+      transform: translate3d(2%, 2%, 2%);
+    }
+    50% {
+      transform: translate3d(-2%, -2%, 0);
+    }
+    100% {
+      transform: translate3d(2%, 2%, 2%);
+    }
+  }
+
+  @keyframes handContact {
+    0% {
+      transform: translate3d(80%, 80%, 80%);
+    }
+    50% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(20%, 20%, 20%);
+    }
+  }

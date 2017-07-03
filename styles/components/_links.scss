@@ -1,0 +1,40 @@
+.mobile-images-links{
+  width: 50px;
+  margin-right: 10px;
+}
+
+@media (min-width: $deskopt-size) {
+
+  .proyects-btn-container a {
+    text-decoration: none;
+    margin-left: 40px;
+    color: $color-secundary;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
+  .proyects-btn-container a:hover {
+    color: white;
+  }
+
+  .proyects-btn-container a:first-child {
+    margin-bottom: 20px;
+  }
+
+  .proyects-btn-container-active {
+      color:$color-tertiary !important;
+  }
+
+  .proyects-links {
+    text-decoration: none;
+    color:$color-tertiary;
+    margin-top: 20px;
+  }
+
+  .contact-a {
+    width: 50px;
+    display: block;
+    margin-right: 20px;
+    z-index: 2;
+  }
+}

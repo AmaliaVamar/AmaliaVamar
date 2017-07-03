@@ -1,0 +1,41 @@
+.mobile-image{
+  animation: fadeFromTop 5s;
+  margin-right: 20px;
+}
+
+@media(min-width: $deskopt-size){
+
+  .home-image {
+    animation: fadeFromTop 5s;
+  }
+
+  .image {
+    width: 600px;
+    border-radius: 10px;
+    margin: 40px 20px;
+  }
+
+  .hands-background {
+    opacity: 0.06;
+    width: 70%;
+    position:fixed;
+    z-index: 0;
+  }
+
+  .hands-proyects {
+    width: 60%;
+    transform: rotate(90deg);
+    animation: handContact 30s infinite;
+  }
+
+  .hands-contact {
+    transform: rotate(90deg);
+    width: 100%;
+    top: -100px;
+    animation: handsContact 40s infinite;
+  }
+
+  .contact-image{
+    width: 100%;
+  }
+}
