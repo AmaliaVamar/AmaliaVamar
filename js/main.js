@@ -1,37 +1,60 @@
 'use strict'
 var smileLink = document.getElementById("smileLink");
 var newLink = document.getElementById("newLink");
-var proyectSmile = document.getElementById("proyectSmile");
-var proyectNew = document.getElementById("proyectNew");
 
 function showProyectSmile(e){
   e.preventDefault();
-  proyectSmile.classList.toggle("show-proyect");
-  smileLink.classList.add("proyects-btn-container-active");
-      newLink.classList.remove("proyects-btn-container-active");
-  if(proyectNew.classList.contains("show-proyect")){
-      proyectNew.classList.remove("show-proyect");
+  $("#smileLink").addClass("proyects-btn-container-active");
+  $("#newLink").removeClass("proyects-btn-container-active");
+
+  if ($('#proyectNew').hasClass("is__visible")) {
+        $('#proyectNew').animate({ 'opacity': 'hide', 'top': '200%' }, 1200);
+        $("#proyectNew").removeClass("animated hinge");
   }
-  if(proyectSmile.classList.contains("show-proyect") === false){
-    smileLink.classList.remove(("proyects-btn-container-active"))
+
+
+  if ($('#proyectSmile').hasClass("is__visible")) {
+      $('#proyectSmile').animate({ 'opacity': 'hide', 'top': '-200%' }, 1600);
+      $('#proyectSmile').removeClass("is__visible");
+      return;
   }
-}
+
+    $('#proyectNew').removeClass("is__visible");
+    $('#proyectSmile').addClass("is__visible");
+    $('#proyectSmile').fadeIn('slow', function () {
+      $('#proyectSmile').animate({ 'opacity': 'show', 'top': '0'}, 1500, function () {
+      });
+    });
+};
 smileLink.addEventListener("click", showProyectSmile);
 
-function showProyectNew(e){
+function showProyectNew(e) {
   e.preventDefault();
-  proyectNew.classList.toggle("show-proyect");
-  newLink.classList.add("proyects-btn-container-active");
-      smileLink.classList.remove("proyects-btn-container-active");
-  if(proyectSmile.classList.contains("show-proyect")){
-      proyectSmile.classList.remove("show-proyect");
+  $("#newLink").addClass("proyects-btn-container-active");
+  $("#smileLink").removeClass("proyects-btn-container-active");
+
+  if ($('#proyectSmile').hasClass("is__visible")) {
+      $('#proyectSmile').animate({ 'opacity': 'hide', 'top': '-200%' }, 1200);
   }
-  if(proyectNew.classList.contains("show-proyect") === false){
-    newLink.classList.remove(("proyects-btn-container-active"))
+
+  if ($('#proyectNew').hasClass("is__visible")) {
+    $('#proyectNew').animate({ 'opacity': 'hide', 'top': '200%' }, 1600);
+    $('#proyectNew').removeClass("is__visible");
+    $("#newLink").removeClass("proyects-btn-container-active");
+    return;
   }
-}
+
+  $('#proyectSmile').removeClass("is__visible");
+  $('#proyectNew').addClass("is__visible");
+  $('#proyectNew').fadeIn('slow', function () {
+    $('#proyectNew').animate({ 'opacity': 'show', 'top': '0' }, 1500, function(){
+
+    });
+  });
+};
 
 newLink.addEventListener("click", showProyectNew);
+
 
 
 $(".nav-link").click(function(e){

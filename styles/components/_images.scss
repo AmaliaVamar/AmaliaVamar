@@ -16,26 +16,40 @@
   }
 
   .hands-background {
-    opacity: 0.06;
-    width: 70%;
-    position:fixed;
-    z-index: 0;
-  }
+      opacity: 0.06;
+      width: 40%;
+      z-index: 0;
+      position: absolute;
+      top: -120%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
 
-  .hands-proyects {
-    width: 60%;
-    transform: rotate(90deg);
-    animation: handContact 30s infinite;
-  }
+    .hands-proyects {
+      width: 100%;
+      transform: rotate(90deg);
+      animation: handContact 30s infinite;
+    }
 
-  .hands-contact {
-    transform: rotate(90deg);
-    width: 100%;
-    top: -100px;
-    animation: handsContact 40s infinite;
-  }
+    .hands-background-contact {
+      opacity: 0.06;
+      width: 100%;
+      z-index: 0;
+      position: absolute;
+      top: -25%;
+      bottom: 0;
+      left: 20%;
+      right: 0;
+    }
 
-  .contact-image{
-    width: 100%;
+    .hands-contact {
+      transform: rotate(90deg);
+      width: 60%;
+      animation: handsContact 40s infinite;
+    }
+
+    .contact-image{
+      width: 100%;
+    }
   }
-}

@@ -151,11 +151,12 @@
   .proyects {
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: $color-primary;
   }
 
   .proyects-btn-container {
+    width: 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,11 +164,13 @@
   }
 
   .proyects-show-container {
-    width: 80%;
+    width: 60%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 2s ease-out;
+    position: relative;
   }
 
   .proyects-text-container {
@@ -176,27 +179,19 @@
   }
 
   .proyect-smile {
-    display: none;
+    margin: auto;
     width: 100%;
-    z-index: 2;
-    animation: enter 2s;
-  }
-
-  .proyects-hand-container {
-    width: 100%;
-    z-index: -10;
-    position: fixed;
-    opacity: 0.06;
-    display: none;
-    top: -5px;
-    right: 40px;
-    animation: enter 2s;
-  }
-
-  .proyects-hands {
-    width: 40%;
-    z-index: 0;
-    transform: rotate(90deg);
+    height: 100vh;
+    position: absolute;
+    top: -200%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 169, 157, 0.1);
   }
 
   .proyect-smile-content {
@@ -205,23 +200,25 @@
   }
 
   .proyect-new {
-    display: none;
+    margin: auto;
     width: 100%;
-    z-index: 2;
-    animation: enter 2s;
+    height: 100vh;
+    position: absolute;
+    top: 200%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 169, 157, 0.1);
   }
 
   .proyect-new-content {
     display:flex;
     flex-direction: column;
     z-index: 4;
-  }
-
-  .show-proyect {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(8, 4, 44, 0.85);
   }
 
   .contact {
@@ -231,6 +228,7 @@
     align-items: center;
     background-color: $color-primary;
   }
+
 
   .panel {
   	width: 100%;
